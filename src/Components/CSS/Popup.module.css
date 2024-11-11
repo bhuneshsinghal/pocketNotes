@@ -1,0 +1,64 @@
+.container {
+    background-color: (0, 0, 0, 0.1);
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    position: absolute;
+    
+    top: 50%;
+    left: 60%;
+    box-shadow: 0 100% 100% rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+}
+
+.inContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    gap: 5px;
+}
+
+.close_btn {
+    width: 30px;
+    align-self: flex-end;
+}
+
+.download {
+    background-color: indigo;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin: 0px 4px;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+input {
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.download2 {
+    height: 20%;
+    width: 40%;
+
+}
+
+.download button {
+    position: relative;
+    left: 60%;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(152, 109, 184);
+    cursor: pointer;
+}
