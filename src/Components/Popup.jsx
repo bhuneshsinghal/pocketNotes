@@ -1,42 +1,30 @@
-import styles from './CSS/Popup.module.css';
-import React, { useContext, useRef } from 'react'
-import { NContext } from '../Context/NotesContext';
-import { X } from 'lucide-react';
-
+import React, { useContext } from 'react'
+import styles from './CSS/Popup.module.css'
 const Popup = (props) => {
-    const { getCurrentTime, data } = useContext(NContext);
-    const groupName = useRef('');
-    const inputValue = groupName.current.value;
-    const { date, time } = getCurrentTime();
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        let newData = {
-            id: 8,
-            name: inputValue,
-            description: "Trump won the 2016 presidential election as the Republican Party nominee, defeating the Democratic Party candidate, Hillary Clinton, while losing the popular vote,[a] and became the first U.S. president without prior military or government service. The Mueller investigation later determined that Russia interfered in the 2016 election to help Trump.",
-            date: date,
-            time: time,
-        }
-        data.data_product = [...data.data_product, newData]
-        console.log(data)
-    }
     return (
-        <div className={styles.container}>
-            <div className={styles.inContainer}>
-                <button className={styles.close_btn} onClick={props.onClose}><X /></button>
-                <div className={styles.download}>
-                    <h1>Create New Group</h1>
-                    <div >
-                        <label htmlFor="">Group Name </label>
-                        <input type="text" ref={groupName} placeholder='Enter group name' required />
-                        <button className={styles.download2} onClick={handleSubmit}>Create</button>
+        <div className={styles.modal_wrapper}>
+            <div className={styles.modal}>
+                <div className={styles.heading}><h2>Create New group</h2></div>
+                <div className={styles.group_name}>
+                    <h3>Group Name</h3>
+                    <input type="text" placeholder='Enter group name' />
+                </div>
+                <div className={styles.choose_color}>
+                    <h3>Choose colour</h3>
+                    <div className={styles.color}>
+                        <div className={styles.box} id={styles.color1}></div>
+                        <div className={styles.box} id={styles.color2}></div>
+                        <div className={styles.box} id={styles.color3}></div>
+                        <div className={styles.box} id={styles.color4}></div>
+                        <div className={styles.box} id={styles.color5}></div>
+                        <div className={styles.box} id={styles.color6}></div>
                     </div>
                 </div>
+                <div className={styles.btn}><button >Create</button> <button onClick={props.onClose}>Close</button></div>
             </div>
+
         </div>
     )
-
-
 }
 
 export default Popup

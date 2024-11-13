@@ -21,6 +21,11 @@
     
 }
 
+.dot {
+    font-size: 40px;
+    font-weight: 800;
+}
+
 .date_time {
     display: flex;
     justify-content: end;

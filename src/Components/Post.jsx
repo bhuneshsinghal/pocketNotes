@@ -9,7 +9,7 @@ const Post = (props) => {
                 <p>An IPO GMP or the grey market premium is the difference between the price at which shares of an Initial Public Offering (IPO) are traded in the grey market and the issue price set by the company. This is how it works; when a company is preparing for an IPO, the price at which its shares are going to be issued is called the issue price. On the other hand, the price at which these same shares are traded before they get listed on the stock exchanges is referred to as the grey market price.</p>
             </div>
             <div className={styles.date_time}>
-                <span>{getCurrentTime().time} {getCurrentTime().date}</span>
+                <span>{getCurrentTime().time} <span className={styles.dot}>.</span> {getCurrentTime().date}</span>
             </div>
         </div>
     )
