@@ -19,6 +19,11 @@ const Editorpage = (props) => {
             </div>
             <div className={styles.post}>
                 <Post></Post>
+                <Post></Post>
+                <Post></Post>
+                <Post></Post>
+                <Post></Post>
+                <Post></Post>
             </div>
             <div className={styles.editor}>
                 <div className={styles.editor_box}>

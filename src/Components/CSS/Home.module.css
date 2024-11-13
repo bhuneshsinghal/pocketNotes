@@ -1,7 +1,6 @@
 .container {
     display: grid;
     grid-template-columns: 0.30fr 1fr;
-    background-color: #DAE5F5;
 }
 
 .left_container {
@@ -12,6 +11,7 @@
     overflow: scroll;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: white;
 }
 
 .left_container h1 {

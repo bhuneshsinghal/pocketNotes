@@ -36,7 +36,8 @@
 
 .post {
     background-color: #DAE5F5;
-
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .editor {
