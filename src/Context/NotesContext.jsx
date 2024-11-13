@@ -1,4 +1,4 @@
-import { createContext } from "react"
+import { createContext, useState } from "react"
 
 import data_product from "../Components/Assets/data";
 
@@ -31,12 +31,14 @@ const getInitials = (name) => {
     initials += words[0].charAt(0).toUpperCase()
     initials += words[words.length - 1].charAt(0).toUpperCase()
     return initials;
-}
+};
 
+// const [selectedNote, setSelectedNote] = useState('');
 export const NContext = createContext({
     data: [],
     getInitials: () => { },
-    getCurrentTime: () => { }
+    getCurrentTime: () => { },
+    setSelectedNote: () => { }
 })
 
 

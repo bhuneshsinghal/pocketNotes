@@ -1,0 +1,83 @@
+.container {
+    display: grid;
+    grid-template-rows: 8% 62% 30%;
+    height: 100vh;
+}
+
+.heading {
+    background-color: #001F8B;
+    color: white;
+    display: grid;
+    grid-template-columns: 0.13fr 1fr;
+    display: flex;
+}
+
+.Initials {
+    display: flex;
+    border: 2px solid;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #0c0f19;
+}
+
+.inner_initials {
+    align-self: center;
+}
+
+.names {
+    margin: 20px;
+    margin-top: 22px;
+}
+
+.post {
+    background-color: #DAE5F5;
+
+}
+
+.editor {
+    background-color: #001F8B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+
+}
+
+.editor_box {
+    background: white;
+    height: 85%;
+    width: 93%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor_box textarea {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    height: 90%;
+    width: 95%;
+    text-align: left;
+    padding: 12px;
+    font-size: large;
+    border-radius: 10px;
+    box-sizing: 'border-box';
+    overflow: 'auto';
+    border: none;
+}
+
+.editor_box img {
+    align-self: flex-end;
+    cursor: pointer;
+    height: 25px;
+    filter: contrast(3.5);
+    margin: 7px;
+}

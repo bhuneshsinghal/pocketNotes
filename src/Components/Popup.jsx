@@ -8,7 +8,8 @@ const Popup = (props) => {
     const groupName = useRef('');
     const inputValue = groupName.current.value;
     const { date, time } = getCurrentTime();
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         let newData = {
             id: 8,
             name: inputValue,

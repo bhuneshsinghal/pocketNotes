@@ -1,6 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 0.30fr 1fr;
+    background-color: #DAE5F5;
 }
 
 .left_container {
@@ -79,56 +80,7 @@
 }
 
 .right_container {
-    /* border: 2px solid green; */
-    background-color: #DAE5F5;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10x;
-    justify-content: center;
+    height: 100vh;
 }
 
-.right_container img {
-    width: 626px;
-    height: 313px;
-    /* border: 2px solid black; */
-}
-
-.encrypted {
-    position: relative;
-    height: 300px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 500px;
-}
-
-.encrypted img {
-    width: 12px;
-    height: 12px;
-}
-
-.right_container p {
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 550;
-    line-height: 32px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    margin-bottom: 0px;
-}
-
-.encrypted p {
-    position: absolute;
-    font-family: Roboto;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 32px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    bottom: 0;
-    left: 30%;
-}
