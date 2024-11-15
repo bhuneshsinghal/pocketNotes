@@ -73,6 +73,8 @@
 .plus_logo img {
     margin-right: 20px;
     margin-bottom: 0px;
+    height: 60px;
+    width: 60px;
     cursor: pointer;
 }
 .plus_logo img:hover {

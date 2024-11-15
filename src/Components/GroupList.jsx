@@ -5,7 +5,7 @@ const GroupList = () => {
     const { data } = useContext(NContext);
     return (
         <div>
-            {(data.data_product).map((item, i) => {
+            {(data).map((item, i) => {
                 return <Item key={i} name={item.name} />
             })}
         </div>

@@ -8,11 +8,11 @@ import Editorpage from './Editorpage';
 import Hero from './Hero';
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
-    const { data } = useContext(NContext);
+    const { data, selectedGroup } = useContext(NContext);
     useEffect(() => { <GroupList /> }, [data])
     return (
         <div className={styles.container}>
-            {showModal && <Popup onClose={() => setShowModal(false)} />}
+            {showModal && <Popup onClose={() => setShowModal(false)} onCreate={() => setShowModal(false)} />}
             <div className={styles.left_container}>
                 <h1>Pocket Notes</h1>
                 <div className={styles.group_name}>
@@ -24,12 +24,12 @@ const Home = () => {
             </div>
 
             <div className={styles.right_container}>
-                {/* <Hero></Hero> */}
-                <Editorpage name="Bhunesh Notes"></Editorpage>
+                {selectedGroup === '' ? <Hero></Hero> : <Editorpage name={selectedGroup}></Editorpage>}
+
             </div>
 
 
-        </div>
+        </div >
     )
 }
 

@@ -4,6 +4,7 @@
     align-items: center;
     row-gap: 10x;
     justify-content: center;
+    background-color: #DAE5F5;
 }
 
 .right_container img {
@@ -14,7 +15,7 @@
 
 .encrypted {
     position: relative;
-    height: 300px;
+    height: 320px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 500px;
 }

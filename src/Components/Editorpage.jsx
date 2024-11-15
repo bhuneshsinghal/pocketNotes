@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './CSS/Editorpage.module.css'
 import Item from './Item'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import Post from './Post'
 import { NContext } from '../Context/NotesContext'
 import Enter from './Assets/Enter.png'
 const Editorpage = (props) => {
-    const { getInitials } = useContext(NContext);
+    const { getInitials, data, getCurrentTime, addPost, setData } = useContext(NContext);
+    const [postData, setPostData] = useState({ description: "" });
+    const [filteredPosts, setFilteredPosts] = useState([]);
+
+    useEffect(() => {
+        const filteredData = Object.values(data).filter(item => item.name === props.name);
+        const posts = filteredData.length > 0 ? filteredData[0].post : [];
+        setFilteredPosts(posts);
+    }, [data, props.name]);
+    const newItem = {}
     return (
         <div className={styles.container}>
             <div className={styles.heading}>
@@ -18,21 +27,30 @@ const Editorpage = (props) => {
                 </span>
             </div>
             <div className={styles.post}>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
-                <Post></Post>
+                {filteredPosts.map((item, i) => {
+                    return <Post posts={item} key={i} />
+                })
+                }
             </div>
             <div className={styles.editor}>
                 <div className={styles.editor_box}>
-                    <textarea type="text" placeholder='Enter your text here ..........' />
-                    <img src={Enter} alt="" />
+                    <textarea type="text" value={postData.description} onChange={(e) => { setPostData(e.target.value) }} placeholder='Enter your text here ..........' />
+                    <img src={Enter} onClick={() => {
+                        if (postData.description != '') {
+                            newItem["name"] = props.name;
+                            newItem["description"] = postData;
+                            newItem["date"] = getCurrentTime().date;
+                            newItem["time"] = getCurrentTime().time;
+                            addPost(props.name, data, newItem, setData)
+
+                        }
+                        setPostData({ description: '' })
+                    }} alt="" />
+
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
 
