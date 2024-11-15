@@ -9,8 +9,8 @@ const Item = (props) => {
     return (
         <div className={styles.itemContainer}>
 
-            <div className={styles.inContainer}>
-                <span className={styles.initials} style={inlineStyle} onClick={() => { setSelectedGroup(props.name) }}>{getInitials(props.name)}</span> <span className={styles.name}>{props.name}</span>
+            <div className={styles.inContainer} onClick={() => { setSelectedGroup(props.name) }}>
+                <span className={styles.initials} style={inlineStyle} >{getInitials(props.name)}</span> <span className={styles.name} >{props.name}</span>
             </div>
         </div>
     )
