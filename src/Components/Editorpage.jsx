@@ -9,6 +9,13 @@ const Editorpage = (props) => {
     const { getInitials, data, getCurrentTime, addPost, setData } = useContext(NContext);
     const [postData, setPostData] = useState({ description: "" });
     const [filteredPosts, setFilteredPosts] = useState([]);
+    const color = (Object.values(data).find((item) => (item.name === props.name))).color
+    const inlineStyle = {
+        "backgroundColor": color, "width": "38px", "height": "38px", "border-radius": "50%", "text-align": "center", "font-size": "18px", "display": "flex",
+        "align-self": "center",
+        "justify-content": "center",
+        "align-items": "center"
+    }
 
     useEffect(() => {
         const filteredData = Object.values(data).filter(item => item.name === props.name);
@@ -20,7 +27,8 @@ const Editorpage = (props) => {
         <div className={styles.container}>
             <div className={styles.heading}>
                 <span className={styles.Initials}>
-                    <span className={styles.inner_initials}>{getInitials(props.name)}</span>
+                    {/* {console.log(inlineStyle)} */}
+                    <span className={styles.inner_initials} style={inlineStyle}>{getInitials(props.name)}</span>
                 </span>
                 <span className={styles.names}>
                     {props.name}

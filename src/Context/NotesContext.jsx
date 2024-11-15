@@ -56,7 +56,7 @@ const addPost = (name, data, postData, setData) => {
     //     setData(data);
     //     setLocalStorage(data)
     // }
-    const updatedData = [...data];
+    const updatedData = [...data]; //shallow copy
     const target = Object.values(data).find((item) => item.name === name)
     if (target) {
         target.post.push(postData)

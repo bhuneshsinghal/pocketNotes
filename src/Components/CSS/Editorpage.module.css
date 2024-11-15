@@ -14,19 +14,16 @@
 
 .Initials {
     display: flex;
-    border: 2px solid;
-    width: 40px;
-    height: 40px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     margin-top: 10px;
     margin-left: 20px;
-    background-color: #0c0f19;
 }
 
 .inner_initials {
     align-self: center;
+    margin-top: 10px;
 }
 
 .names {
