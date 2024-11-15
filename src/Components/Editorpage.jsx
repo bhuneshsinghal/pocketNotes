@@ -11,10 +11,7 @@ const Editorpage = (props) => {
     const [filteredPosts, setFilteredPosts] = useState([]);
     const color = (Object.values(data).find((item) => (item.name === props.name))).color
     const inlineStyle = {
-        "backgroundColor": color, "width": "38px", "height": "38px", "border-radius": "50%", "text-align": "center", "font-size": "18px", "display": "flex",
-        "align-self": "center",
-        "justify-content": "center",
-        "align-items": "center"
+        "backgroundColor": color, "width": "38px", "height": "38px", "border-radius": "50%", "text-align": "center", "font-size": "18px",
     }
 
     useEffect(() => {
