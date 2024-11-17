@@ -86,3 +86,26 @@
     height: 100vh;
 }
 
+@media(max-width: 768px)
+{
+    .right_container {
+        display: none;
+    }
+    .left_container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .show_right_container .left_container{
+        display: none;
+    }
+    .show_right_container .right_container {
+        display: block;
+        /* height: 100%;
+        width: 100%; */
+    }
+    .plus_logo {
+        height: 10%;
+        margin-top: 75px;
+    }
+}

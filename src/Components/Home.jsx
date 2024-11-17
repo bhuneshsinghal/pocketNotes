@@ -9,9 +9,10 @@ import Hero from './Hero';
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
     const { data, selectedGroup } = useContext(NContext);
+    const [showRightContainer, setShowRightContainer] = useState(false);
     useEffect(() => { <GroupList /> }, [data])
     return (
-        <div className={styles.container}>
+        <div className={`block ${showRightContainer ? styles.show_right_container : ''} ${styles.container}`}>
             {showModal && <Popup onClose={() => setShowModal(false)} onCreate={() => setShowModal(false)} />}
             <div className={styles.left_container}>
                 <h1>Pocket Notes</h1>
